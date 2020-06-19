@@ -8,7 +8,7 @@ UNKNOWN_FACES_DIR = 'unknow_faces'
 TOLERANCE = 0.6
 FRAME_THICKNESS = 3
 FONT_THICKNESS = 2
-MODEL = "cnn" #hog
+MODEL = "cnn"  # hog
 
 print('loading known faces')
 
