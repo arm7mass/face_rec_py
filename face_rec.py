@@ -3,8 +3,8 @@ import os
 import cv2
 
 
-KNOWN_FACES_DIR = 'know_faces'
-UNKNOWN_FACES_DIR = 'unknow_faces'
+KNOWN_FACES_DIR = 'known_faces'
+UNKNOWN_FACES_DIR = 'unknown_faces'
 TOLERANCE = 0.6
 FRAME_THICKNESS = 3
 FONT_THICKNESS = 2
@@ -49,6 +49,7 @@ for filename in os.listdir(UNKNOWN_FACES_DIR):
 
     cv2.imshow(filename, image)
     cv2.waitkey(10000)
-    #cv2.detsroyWindow(filename)
+
+    # cv2.detsroyWindow(filename)
 
 
