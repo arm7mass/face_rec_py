@@ -1,5 +1,6 @@
 # face recognition by ARM
 
+# to do validate the Pathes
 import face_recognition
 import os
 import cv2
