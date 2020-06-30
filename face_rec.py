@@ -1,9 +1,10 @@
 # face recognition by ARM
 
-# to do validate the Pathes
+# todo: validate the Paths
 import face_recognition
 import os
 import cv2
+from pathlib import Path, PureWindowsPath
 
 
 KNOWN_FACES_DIR = 'known_faces'
@@ -17,6 +18,10 @@ print('loading known faces')
 
 known_faces = []
 known_names = []
+file_path_known = Path('D:/Development/Projects/OnGoing_Projects/sentdex_series/face_rec_py/known_faces')
+win_path_known = PureWindowsPath(file_path_known)
+file_path_unknown = Path('D:/Development/Projects/OnGoing_Projects/sentdex_series/face_rec_py/unknown_faces')
+win_path_unknown = PureWindowsPath(file_path_unknown)
 
 for name in os.listdir(KNOWN_FACES_DIR):
     for filename in os.listdir(f"{KNOWN_FACES_DIR}\\{name}"):
