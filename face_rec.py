@@ -52,7 +52,7 @@ print('processing unknown faces')
 for filename in os.listdir(UNKNOWN_FACES_DIR):
     # Load image
     print(f'filename {filename}', end='')
-    image = face_recognition.load_image_file(f"{UNKNOWN_FACES_DIR}/{filename}")
+    image = face_recognition.load_image_file(f"{UNKNOWN_FACES_DIR}/{name}/{filename}")
     # This time we first grab face locations - we'll need them to draw boxes
     locations = face_recognition.face_locations(image, model=MODEL)
     # Now since we know locations, we can pass them to face_encodings as second argument
