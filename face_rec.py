@@ -49,7 +49,9 @@ for name in os.listdir(KNOWN_FACES_DIR):
 
 print('processing unknown faces')
 # Now let's loop over a folder of faces we want to label
-for filename in os.listdir(UNKNOWN_FACES_DIR):
+for name in os.listdir(UNKNOWN_FACES_DIR):
+    for filename in os.listdir(f"{UNKNOWN_FACES_DIR}/{name}"):
+
     # Load image
     print(f'filename {filename}', end='')
     image = face_recognition.load_image_file(f"{UNKNOWN_FACES_DIR}/{name}/{filename}")
