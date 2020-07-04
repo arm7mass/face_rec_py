@@ -53,18 +53,18 @@ for name in os.listdir(UNKNOWN_FACES_DIR):
     for filename in os.listdir(f"{UNKNOWN_FACES_DIR}/{name}"):
 
     # Load image
-    print(f'filename {filename}', end='')
-    image = face_recognition.load_image_file(f"{UNKNOWN_FACES_DIR}/{name}/{filename}")
+        print(f'filename {filename}', end='')
+        image = face_recognition.load_image_file(f"{UNKNOWN_FACES_DIR}/{name}/{filename}")
     # This time we first grab face locations - we'll need them to draw boxes
-    locations = face_recognition.face_locations(image, model=MODEL)
+        locations = face_recognition.face_locations(image, model=MODEL)
     # Now since we know locations, we can pass them to face_encodings as second argument
     # Without that it will search for faces once again slowing down whole process
-    encodings = face_recognition.face_encodings(image,  locations)
+        encodings = face_recognition.face_encodings(image,  locations)
     # We passed our image through face_locations and face_encodings, so we can modify it
     # First we need to convert it from RGB to BGR as we are going to work with cv2
-    image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
+        image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
     # But this time we assume that there might be more faces in an image - we can find faces of
-    print(f', found {len(encodings)} face(s)')
+        print(f', found {len(encodings)} face(s)')
     for face_encoding, face_location in zip(encodings, locations):
         # We use compare_faces (but might use face_distance as well)
         # Returns array of True/False values in order of passed known_faces
