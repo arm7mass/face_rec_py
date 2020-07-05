@@ -1,6 +1,7 @@
 # face recognition by ARM
 
 # todo: validate the Paths
+# it works only in linux system
 import face_recognition
 import os
 import cv2
