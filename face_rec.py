@@ -2,6 +2,7 @@
 
 # todo: validate the Paths
 # it works only in linux system
+# I am using ubunto windows 
 import face_recognition
 import os
 import cv2
