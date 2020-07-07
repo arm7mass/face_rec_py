@@ -92,7 +92,7 @@ for name in os.listdir(UNKNOWN_FACES_DIR):
 
     # Show image
     cv2.imshow(filename, image)
-    cv2.waitkey(10000)
+    cv2.waitKey(10000)
 
     # cv2.detsroyWindow(filename)
 
