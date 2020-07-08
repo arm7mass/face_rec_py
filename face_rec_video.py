@@ -1,4 +1,4 @@
-# face recognition for photos by ARM
+# face recognition for videos by ARM
 
 # todo: validate the Paths
 # it works only in linux system
